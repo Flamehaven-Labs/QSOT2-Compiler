@@ -1,0 +1,7 @@
+# Canonical LF in the repository (blob) regardless of OS working-tree settings.
+# Verification artifacts are hashed over canonical LF bytes; do not let Windows
+# CRLF leak into provenance. See QSOT-Harness CRLF/LF provenance lesson.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary

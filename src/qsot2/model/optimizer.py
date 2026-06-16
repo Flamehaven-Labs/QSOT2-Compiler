@@ -77,9 +77,7 @@ def run_kd_optimization(
     """
     if not TORCH_AVAILABLE:
         logger.warning("PyTorch not found -- KD optimization skipped.")
-        Path(out_path).write_text(
-            json.dumps({"kd_value": 0.0, "error": "torch_missing"}, indent=2)
-        )
+        Path(out_path).write_text(json.dumps({"kd_value": 0.0, "error": "torch_missing"}, indent=2))
         return None
 
     try:

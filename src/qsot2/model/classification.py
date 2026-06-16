@@ -32,9 +32,7 @@ def classify_background(bg) -> dict:
     einstein_residual_norm = getattr(bg, "einstein_residual_norm", 0.0)
     stress_energy_norm = getattr(bg, "stress_energy_norm", 0.0)
 
-    is_einstein_space = (
-        cosmological_constant is not None and einstein_residual_norm <= EINSTEIN_EPS
-    )
+    is_einstein_space = cosmological_constant is not None and einstein_residual_norm <= EINSTEIN_EPS
 
     is_vacuum_like = is_ricci_flat or (is_einstein_space and stress_energy_norm <= STRESS_EPS)
 

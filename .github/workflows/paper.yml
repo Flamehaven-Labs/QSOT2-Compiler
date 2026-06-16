@@ -1,0 +1,28 @@
+name: Paper
+
+on:
+  push:
+    branches: [main]
+    paths: ["paper/**"]
+  pull_request:
+    paths: ["paper/**"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile LaTeX (warnings/errors surfaced by the action)
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: paper
+          root_file: main.tex
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qsot2-paper-pdf
+          path: paper/main.pdf
+          if-no-files-found: error

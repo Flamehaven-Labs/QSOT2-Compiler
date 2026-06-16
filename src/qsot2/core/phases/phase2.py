@@ -100,9 +100,7 @@ def run_phase2(ctx: PhaseContext) -> None:
     )
     ctx.result.checks["eguchi_hanson_gate_fails_gs"] = (
         "PASS"
-        if (
-            eguchi_verify["gate"] == "FAIL" and eguchi_verify["physics"]["gs_anomaly_flag"] is True
-        )
+        if (eguchi_verify["gate"] == "FAIL" and eguchi_verify["physics"]["gs_anomaly_flag"] is True)
         else "FAIL"
     )
 

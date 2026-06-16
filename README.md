@@ -1,5 +1,6 @@
 # QSOT2
 
+[![CI](https://github.com/Flamehaven-Labs/QSOT2-Compiler/actions/workflows/ci.yml/badge.svg)](https://github.com/Flamehaven-Labs/QSOT2-Compiler/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Claim scope: mathematical-consistency only](https://img.shields.io/badge/claim%20scope-mathematical--consistency%20only-orange.svg)](docs/SCOPE.md)

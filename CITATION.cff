@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use QSOT2, please cite this software."
+title: "QSOT2: a mathematical-consistency verifier for a phenomenological curved-spacetime quantum-channel model"
+abstract: >-
+  A bounded verifier of the internal mathematical consistency of a phenomenological
+  model that maps curved-spacetime curvature norms to single-qubit quantum channels.
+  Model-consistency only; it makes no external-physical-validity or first-principles
+  claim.
+authors:
+  - name: "Flamehaven Labs"
+version: "0.1.0"
+license: MIT
+repository-code: "https://github.com/Flamehaven-Labs/QSOT2-Compiler"
+keywords:
+  - quantum-channels
+  - verification
+  - reproducibility
+  - phenomenological-model

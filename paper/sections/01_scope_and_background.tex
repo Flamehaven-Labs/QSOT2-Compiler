@@ -1,12 +1,18 @@
-This section should do three things only.
+\textbf{QSOT} abbreviates \emph{Quantum State Over Time}. \texttt{QSOT2} is a
+mathematical-consistency verifier for a phenomenological curved-spacetime quantum-channel
+model: it maps the Frobenius norm of a background's Riemann tensor to a single-qubit
+decoherence channel and checks that the resulting quantum-mechanical machinery is
+internally consistent, deterministic, and reproducible.
 
-First, define QSOT2 as a mathematical-consistency verifier for a
-phenomenological curved-spacetime quantum-channel model. Second, explain the
-lineage from the earlier QSOT lines in one compact paragraph, without turning
-the paper into a historical essay. Third, state the retained scope:
-internal quantum-mechanical consistency, deterministic execution, and
-reproducible numerical outputs.
+\paragraph{Lineage.} The QSOT line passed through three forms. \emph{QSOT~v1} was an
+intentional high-formality slop artifact, formal-looking but effectively non-running.
+\emph{QSOT-Harness} was an honest reconstruction that made the model run and added an
+epistemic-governance shell; it remains the published combined snapshot. \texttt{QSOT2}
+re-scopes that work to its mathematical core --- the model and its verification harness
+--- with the governance machinery deliberately lifted out so the verification is legible
+on its own terms.
 
-Do not spend this section on governance taxonomy or on repeated disclaimers.
-One compact scope paragraph is enough here; the full non-claim inventory belongs
-in Section~\ref{sec:limits}.
+\paragraph{Retained scope.} QSOT2 verifies (i) internal quantum-mechanical consistency of
+the implemented maps, (ii) deterministic execution of an end-to-end pipeline, and (iii)
+reproducible numerical outputs. What it deliberately does \emph{not} claim is centralized
+in \S\ref{sec:limits}.

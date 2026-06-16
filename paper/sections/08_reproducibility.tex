@@ -1,14 +1,24 @@
-This section should be practical and short.
+\paragraph{Run the experiment.}
+\begin{verbatim}
+python run_experiment.py --config configs/experiment.yaml --out reports
+\end{verbatim}
 
-It should contain:
+\paragraph{Run the tests.}
+\begin{verbatim}
+python -m pytest
+\end{verbatim}
+The suite has 50 tests behind a 90\% coverage gate; the current suite measures
+$\sim$96\%.
 
-\begin{itemize}[leftmargin=1.5em]
-\item the exact command used to run the experiment
-\item the exact command used to run the tests
-\item the expected artifact filenames
-\item the expected schema identifier
-\item the retained numeric parity targets relative to the source migration line
-\end{itemize}
+\paragraph{Artifacts and schema.} The run writes \texttt{reports/result.json} and
+\texttt{reports/report.md}. The result carries
+\texttt{schema\_id = qsot2.math\_consistency.experiment\_result.v1} and a four-field
+claim boundary; it contains no evidence-class, audit-context, or calibration blocks.
 
-Avoid environment-dependent ornament such as exact wall-clock timings unless the
-timing itself is the subject of the paper.
+\paragraph{Parity targets.} Against the QSOT-Harness r1 math engine the retained
+quantities reproduce: $Q^{\text{flat}}_{\mathrm{KD}} \approx -0.1234$,
+$Q^{\text{de Sitter}}_{\mathrm{KD}} \approx -4.7\times10^{-4}$,
+$\Delta_{\mathrm{KD}} \approx +0.1230$, self-test $\mathrm{nm}\approx 1.41\times10^{-4}$,
+model $\mathrm{nm}=0$, purities $0.99943/0.63607/0.67764/0.99887$, and axiom deviations at
+machine epsilon. Re-runs are content-stable except for the \texttt{generated\_at}
+timestamp.

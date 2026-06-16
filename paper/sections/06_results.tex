@@ -1,15 +1,35 @@
-This section should consolidate the retained numerical outputs into a compact,
-readable summary.
+Table~\ref{tab:qsot2_results} consolidates the reference run ($\alpha=0.1$, six
+backgrounds). The pipeline runs Phase~0 plus Phases~1--5 (35 deterministic checks) and
+returns an overall \texttt{DEGRADED\_PASS}: 34 checks pass and one is degraded (the
+flat-baseline KD non-convergence). There are no failures and no governance/audit phases.
 
-Suggested contents:
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Quantity & Value & Note \\
+\midrule
+Overall verdict & \texttt{DEGRADED\_PASS} & 34 pass / 0 fail / 0 skip / 1 degraded \\
+Checks (total) & 35 & Phase 0 + Phases 1--5 \\
+$P_{\mathrm{Schw}}/P_{\mathrm{dS}}/P_{\mathrm{AdS}}/P_{\mathrm{EH}}$
+  & $0.99943/0.63607/0.67764/0.99887$ & purity \\
+$S_{\mathrm{dS}}/S_{\mathrm{AdS}}$ & $0.5501/0.5031$ & von Neumann entropy \\
+$\Delta_{\mathrm{KD}}$ & $+0.1230$ & flat-relative, non-converged \\
+$\mathrm{nm}$ (self-test / model) & $1.41\times10^{-4}\;/\;0$ & detector vs.\ model \\
+axiom deviations & $\le 4.4\times10^{-16}$ & machine epsilon \\
+\bottomrule
+\end{tabular}
+\caption{Consolidated QSOT2 reference-run outputs.}
+\label{tab:qsot2_results}
+\end{table}
 
-\begin{itemize}[leftmargin=1.5em]
-\item table of phase verdicts and retained checks
-\item key scalar outputs: purity, entropy, KD, memory proxy
-\item one short sensitivity table if the QSOT2 line retains the alpha sweep
-\item one compact paragraph on what remained numerically identical to the
-  QSOT-Harness r1 math engine
-\end{itemize}
+\paragraph{Sensitivity.} The qualitative classification is stable across a manual
+three-point $\alpha$ sweep while magnitudes remain calibration-dependent: at
+$\alpha\in\{0.01, 0.1, 1.0\}$ the flat-relative signal is
+$\Delta_{\mathrm{KD}} = +0.0135,\ +0.1230,\ +0.1235$, and the model-trajectory memory
+result stays $0$ throughout.
 
-The goal is to let a reviewer see, in one place, what the verifier actually
-computed without having to reconstruct it from phase-by-phase prose.
+\paragraph{Parity.} Every retained mathematical quantity above reproduces the
+QSOT-Harness r1 math engine numerically. QSOT2 differs only by design: the
+governance/audit surfaces are absent and the result schema is leaner.

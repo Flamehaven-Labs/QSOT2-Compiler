@@ -1,19 +1,25 @@
-This section should cover the retained model pipeline outside KD and the
-memory proxy:
+Phases~1--3 exercise the retained model pipeline outside the KD and memory-proxy
+diagnostics.
 
-\begin{itemize}[leftmargin=1.5em]
-\item flat baselines
-\item curvature-noise phases across the retained backgrounds
-\item relativistic boost amplification checks
-\end{itemize}
+\paragraph{Flat baselines (Phase~1).} A qubit evolved through a flat Minkowski
+background, at rest and boosted, preserves purity ($P=1.0$) and zero von Neumann entropy
+and clears the causal-structure gate. This fixes the no-noise limit of the implemented
+map.
 
-The emphasis here should be on internal behavior:
+\paragraph{Curvature noise (Phase~2).} Across the curved backgrounds the channel map
+$p = 1-\exp(-\alpha\lVert \mathrm{Riemann}\rVert_F)$ drives purity decay and entropy
+growth. In the reference run ($\alpha=0.1$): Schwarzschild $P=0.99943$, de~Sitter
+$P=0.63607$, AdS5 $P=0.67764$, and Eguchi--Hanson $P=0.99887$, with von Neumann entropies
+of $0.0026$, $0.5501$, $0.5031$, and $0.0048$ respectively. The design separates the two
+curvature roles: the \emph{Riemann} norm drives decoherence --- so Ricci-flat vacua such
+as Schwarzschild and Eguchi--Hanson still decohere through non-zero tidal curvature ---
+while the \emph{Ricci}-based residual feeds the admissibility gate. The retained gate
+pattern is \texttt{PASS} for flat/Schwarzschild/AdS5 and \texttt{FAIL} for de~Sitter
+(non-zero beta residual), Eguchi--Hanson (gravitational-anomaly proxy), and G\"odel
+(closed timelike curve). These are policy-derived classifications, not physical
+observables, and each verify block carries a machine-readable reason code.
 
-\begin{itemize}[leftmargin=1.5em]
-\item purity and entropy evolve consistently with the implemented channels
-\item Ricci and Riemann play different roles in the retained design
-\item boost terms affect the effective noise parameter in the intended direction
-\end{itemize}
-
-This section should not overstate physical meaning. It should explain how the
-implemented model behaves, not why nature must behave that way.
+\paragraph{Relativistic boosts (Phase~3).} A boost $\beta>0$ increases the effective
+noise parameter through the combination of gravitational and kinematical time dilation,
+in the intended direction. This section explains how the implemented model behaves, not
+why nature must behave that way.

@@ -29,18 +29,32 @@
 }
 
 \author{QSOT2 Project}
-\date{Draft scaffold --- fill from verified qsot2 artifacts}
+\date{2026-06-16 \\ \small Source: \texttt{github.com/Flamehaven-Labs/QSOT2-Compiler}}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-This manuscript should be written as a bounded mathematical-consistency note.
-Its task is to explain what the QSOT2 verifier checks, what numerical quantities
-it preserves from the retained model line, and which claims remain explicitly
-out of scope. The abstract should state the executable scope in one paragraph and
-the reproducibility surface in one short paragraph. It should not front-load the
-governance architecture and it should not imply any new physical law.
+We present \texttt{QSOT2}, a bounded \emph{mathematical-consistency verifier} for a
+phenomenological model mapping classical curved-spacetime curvature norms (Frobenius
+norms of the Riemann and Ricci tensors) to single-qubit decoherence channels. The
+mapping is a conceptual ansatz with a free calibration parameter $\alpha$; QSOT2 makes
+no first-principles or external-physical-validity claim. Its sole deliverable is to
+verify that the model holds together as quantum mechanics and as executable software:
+temporal-state axioms (linearity, CPTP completeness, trace preservation,
+conditionability, density validity) are checked to machine epsilon, channels are CPTP by
+construction, a flat-relative Kirkwood-Dirac comparison is reported as a bounded
+diagnostic, and a TTM-inspired trace-distance proxy is split into a detector self-test
+and the model trajectory. The reference run over six spacetime backgrounds emits a
+machine-readable result with a four-field claim boundary and an overall
+\texttt{DEGRADED\_PASS} verdict across 35 deterministic checks --- degraded for exactly
+one documented reason: the flat-baseline KD optimizer does not converge within its fixed
+step budget.
+
+\noindent\textbf{Reproducibility.} One command runs the experiment and one runs the test
+suite (50 tests, $\sim$96\% coverage). The retained numerical outputs reproduce the
+QSOT-Harness r1 math engine; the exact commands and parity targets are given in
+\S\ref{sec:repro}.
 \end{abstract}
 
 \tableofcontents

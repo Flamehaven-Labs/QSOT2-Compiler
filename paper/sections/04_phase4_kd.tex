@@ -1,20 +1,23 @@
-This section should isolate the KD phase and keep its interpretation narrow.
-
-Recommended structure:
+Phase~4 reports a single bounded diagnostic and keeps its interpretation narrow.
 
 \begin{enumerate}[leftmargin=1.5em]
-\item define the optimized KD quantity used in the implementation
-\item report the flat and de Sitter values separately
-\item report the flat-relative difference $\Delta_{\mathrm{KD}}$
-\item report optimizer convergence status independently from the value itself
+\item The implementation searches single-qubit measurement-basis angles to minimize the
+  real part of a Kirkwood-Dirac quasiprobability,
+  $\min \operatorname{Re}\operatorname{Tr}(P_b P_a \rho)$.
+\item The flat and de~Sitter optima are reported separately: in the reference run
+  $Q^{\text{flat}}_{\mathrm{KD}} \approx -0.1234$ and
+  $Q^{\text{de Sitter}}_{\mathrm{KD}} \approx -4.7\times10^{-4}$.
+\item The reported signal is the flat-relative difference
+  $\Delta_{\mathrm{KD}} = Q^{\text{de Sitter}}_{\mathrm{KD}} - Q^{\text{flat}}_{\mathrm{KD}}
+  \approx +0.1230$.
+\item Convergence is reported independently of the value: the flat-baseline search does
+  not converge within its fixed 50-step budget, so the KD check is surfaced as
+  \texttt{DEGRADED\_PASS} rather than hidden.
 \end{enumerate}
 
-Two rules matter here:
-
-\begin{itemize}[leftmargin=1.5em]
-\item raw negativity in an optimized basis is not a curvature proof
-\item the reported value must track the best objective, not merely the last step
-\end{itemize}
-
-This section should therefore read as a bounded diagnostic report, not as a
-contextuality theorem.
+Two rules bound the reading. First, negative KD in an optimized basis is a generic
+property of single-qubit states; it is \emph{not} a curvature or contextuality proof.
+Only the flat-relative delta is reported, and even that is a model-relative quantity.
+Second, the reported value tracks the \emph{best} observed objective (best and last
+values are recorded separately), not merely the final optimizer step. This section
+therefore reads as a bounded diagnostic report, not a contextuality theorem.

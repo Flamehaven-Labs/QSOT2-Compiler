@@ -1,14 +1,20 @@
-This section should present the TTM-inspired memory proxy as exactly what it is:
-a bounded diagnostic for backflow detection under the implemented channel path.
+Phase~5 runs a TTM-inspired trace-distance proxy: at each step it accumulates the trace
+distance between the actual trajectory and the one-step Markovian channel prediction. It
+is a bounded backflow diagnostic, not a transfer-tensor reconstruction.
 
-Separate the two trajectories clearly:
+Two trajectories are kept distinct:
 
 \begin{itemize}[leftmargin=1.5em]
-\item synthetic injected-backflow self-test
-\item model-generated trajectory
+\item \emph{Synthetic self-test.} An artificial coherence backflow is injected to confirm
+  the detector registers $\mathrm{nm} > 0$ (reference value
+  $\mathrm{nm} \approx 1.4\times10^{-4}$ at $\alpha=0.1$). A pass validates the detector
+  only.
+\item \emph{Model-generated trajectory.} Produced by applying the configured channel
+  consistently with no injected revival, this yields $\mathrm{nm} = 0$: the
+  phenomenological map is Markovian by construction.
 \end{itemize}
 
-The self-test validates that the detector can register $nm > 0$ when artificial
-backflow is introduced. The model trajectory showing $nm \approx 0$ should be
-framed as Markovian-by-construction behavior of the implemented map, not as a
-deep physical discovery.
+The detection threshold and the Ricci norm at which it was evaluated are surfaced with
+the result, so the (here non-engaged) curvature scaling is explicit rather than implied.
+A zero model-trajectory result is a property of the implemented map, not a deep physical
+discovery.

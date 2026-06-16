@@ -8,6 +8,10 @@ on:
     paths: ["paper/**"]
   workflow_dispatch:
 
+# Opt into the Node.js 24 action runtime (Node 20 is deprecated as of 2026-06-16).
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   build:
     runs-on: ubuntu-latest

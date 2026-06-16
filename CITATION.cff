@@ -8,7 +8,7 @@ abstract: >-
   claim.
 authors:
   - name: "Flamehaven Labs"
-version: "0.1.0"
+version: "0.1.0.dev0"
 license: MIT
 repository-code: "https://github.com/Flamehaven-Labs/QSOT2-Compiler"
 keywords:

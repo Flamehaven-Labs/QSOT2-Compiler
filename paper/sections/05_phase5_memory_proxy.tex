@@ -1,0 +1,14 @@
+This section should present the TTM-inspired memory proxy as exactly what it is:
+a bounded diagnostic for backflow detection under the implemented channel path.
+
+Separate the two trajectories clearly:
+
+\begin{itemize}[leftmargin=1.5em]
+\item synthetic injected-backflow self-test
+\item model-generated trajectory
+\end{itemize}
+
+The self-test validates that the detector can register $nm > 0$ when artificial
+backflow is introduced. The model trajectory showing $nm \approx 0$ should be
+framed as Markovian-by-construction behavior of the implemented map, not as a
+deep physical discovery.

@@ -1,0 +1,36 @@
+# QSOT2 Mathematical-Consistency Verification Report
+
+**Verdict:** `{{ verdict }}`
+**Generated:** `{{ generated_at }}`
+
+> [!NOTE]
+> **Scope.** QSOT2 verifies the *internal mathematical consistency* of a phenomenological
+> quantum-channel model of curved-spacetime backgrounds. It does **not** claim external
+> physical validity, first-principles grounding, or new physics. A passing check means
+> model-internal mathematical consistency under the stated assumptions.
+
+## Check Summary
+- **Total checks:** {{ total }}
+- **PASS:** {{ passed }}
+- **DEGRADED_PASS:** {{ degraded }}
+- **SKIPPED:** {{ skipped }}
+- **FAIL:** {{ failed }}
+
+## Checks
+
+{% for name, status in checks.items() -%}
+- `{{ name }}`: **{{ status }}**
+{% endfor %}
+
+## Interpretation
+
+The {{ total }} automated checks verify consistency with the implemented model assumptions:
+
+1. **Temporal-state axioms (Phase 0):** linearity, CPTP completeness, trace preservation, conditionability, and density-matrix validity hold to machine epsilon.
+2. **Flat Minkowski baselines (Phase 1):** a qubit evolved through flat spacetime preserves purity ($P = 1.0$) and zero von Neumann entropy.
+3. **Curvature noise (Phase 2):** curved backgrounds (Schwarzschild, de Sitter, AdS5, Eguchi-Hanson) induce purity decay and entropy growth via the Riemann-norm channel map -- a phenomenological ansatz, not a derivation; Ricci-flat vacua still pass the admissibility gate.
+4. **Relativistic boosts (Phase 3):** boosts amplify the effective noise parameter within the implemented model.
+5. **Kirkwood-Dirac, flat-relative (Phase 4):** a bounded basis search reports the de-Sitter-minus-flat KD delta as a relative quantity under the model -- not a contextuality proof. Non-convergence within the fixed step budget is surfaced explicitly as `DEGRADED_PASS`.
+6. **TTM-inspired memory proxy (Phase 5):** a detector self-test on a synthetic injected backflow confirms it registers $\text{nm} > 0$; the model's own trajectory is Markovian by construction ($\text{nm} \approx 0$). The self-test validates the detector, not non-Markovian physics in the model.
+
+External physical validity is outside the scope of this report.

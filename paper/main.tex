@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=blue!50!black,
+  pdftitle={A Mathematical-Consistency Verifier for a Phenomenological Curved-Spacetime Quantum-Channel Model},
+  pdfauthor={QSOT2 Project}
+}
+
+\title{%
+  A Mathematical-Consistency Verifier\\
+  for a Phenomenological Curved-Spacetime\\
+  Quantum-Channel Model\\[0.5em]
+  \large Executable Internal-Consistency Checks for the QSOT2 Line
+}
+
+\author{QSOT2 Project}
+\date{Draft scaffold --- fill from verified qsot2 artifacts}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This manuscript should be written as a bounded mathematical-consistency note.
+Its task is to explain what the QSOT2 verifier checks, what numerical quantities
+it preserves from the retained model line, and which claims remain explicitly
+out of scope. The abstract should state the executable scope in one paragraph and
+the reproducibility surface in one short paragraph. It should not front-load the
+governance architecture and it should not imply any new physical law.
+\end{abstract}
+
+\tableofcontents
+\clearpage
+
+\section{Scope and Background}
+\label{sec:scope}
+\input{sections/01_scope_and_background.tex}
+
+\section{Phase 0: Temporal Axiom Contract Checks}
+\label{sec:phase0}
+\input{sections/02_phase0_axioms.tex}
+
+\section{Phases 1--3: Baselines, Curvature Noise, and Boosts}
+\label{sec:phase1to3}
+\input{sections/03_phase1_3_model_checks.tex}
+
+\section{Phase 4: Flat-Relative KD Signal}
+\label{sec:phase4}
+\input{sections/04_phase4_kd.tex}
+
+\section{Phase 5: TTM-Inspired Memory Proxy}
+\label{sec:phase5}
+\input{sections/05_phase5_memory_proxy.tex}
+
+\section{Consolidated Results}
+\label{sec:results}
+\input{sections/06_results.tex}
+
+\section{Limits and Explicit Non-Claims}
+\label{sec:limits}
+\input{sections/07_limits_and_nonclaims.tex}
+
+\section{Reproducibility}
+\label{sec:repro}
+\input{sections/08_reproducibility.tex}
+
+\section*{Acknowledgements}
+\input{sections/09_acknowledgements.tex}
+
+\end{document}

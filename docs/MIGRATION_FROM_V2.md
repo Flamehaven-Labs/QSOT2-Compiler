@@ -1,6 +1,6 @@
 # Migration from QSOT-Harness (`qsot_v2`) to QSOT2
 
-Source: `D:\Sanctum\Flamehaven-Labs\QSOT_Compiler_V2\src\qsot_v2\` at the published r1 line
+Source: the QSOT-Harness repository (`src/qsot_v2/`) at the published r1 line
 (source commit `c0f6c6a`, artifact canonical-LF `1498610f`, DOI 10.5281/zenodo.20703548).
 
 QSOT2 ports the **model + harness** layers and **defers** the governance layer. This is a
@@ -19,7 +19,7 @@ governance imports.
 
 **core/** (harness skeleton)
 - `core/config.py`, `runner.py`, `results.py`, `phase_context.py`, `checks.py`
-- `core/phases/phase0..phase6` (the math-verification phases)
+- `core/phases/phase0..phase5` (the math-verification phases)
 - `cli/run_experiment.py`
 - `configs/experiment.yaml`
 
@@ -54,3 +54,7 @@ result schema is leaner. Check counts will differ from QSOT-Harness's 50 — tha
   research effort, e.g. building on Pikovski et al. gravitational decoherence).
 - Generalizing the harness/governance into a reusable product (that is the
   `flamehaven-sci-governance` line, where the strongest QSOT-Harness asset is elevated).
+- Phase 6 (Rust `turbovec` vector-search sidecar): a non-mathematical engineering test.
+  Moved to `experimental/` and removed from the required pipeline and the verdict. The
+  source is retained as an optional/experimental path; it must not drive QSOT2's headline
+  verdict, which is determined by the mathematical phases (0-5) only.

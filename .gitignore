@@ -14,6 +14,10 @@ venv/
 .coverage.*
 htmlcov/
 
+# Rust sidecar build artifacts (experimental/optional, not part of the math core)
+target/
+experimental/rust_sidecar/target/
+
 # Editors / OS
 .vscode/
 .idea/

@@ -19,4 +19,4 @@
 
 ## Status
 
-Scaffolding. The verification core migrates from QSOT-Harness `src/qsot_v2/` (the model + harness layers); the governance machinery is deferred. See [`docs/MIGRATION_FROM_V2.md`](docs/MIGRATION_FROM_V2.md) and [`docs/SCOPE.md`](docs/SCOPE.md).
+Initial migration complete. The model + math-verification harness (Phases 0-5) is ported from QSOT-Harness `src/qsot_v2/`; the governance machinery is deferred, and the Rust vector-search sidecar (former Phase 6) is kept under `experimental/` and is **not** part of the verdict. A reference run yields `DEGRADED_PASS` over 35 checks — the only degraded check is the Kirkwood-Dirac optimizer's fixed-budget non-convergence, surfaced honestly. Test migration is the next step. See [`docs/MIGRATION_FROM_V2.md`](docs/MIGRATION_FROM_V2.md) and [`docs/SCOPE.md`](docs/SCOPE.md).

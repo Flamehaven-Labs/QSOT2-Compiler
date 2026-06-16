@@ -1,0 +1,20 @@
+This section should isolate the KD phase and keep its interpretation narrow.
+
+Recommended structure:
+
+\begin{enumerate}[leftmargin=1.5em]
+\item define the optimized KD quantity used in the implementation
+\item report the flat and de Sitter values separately
+\item report the flat-relative difference $\Delta_{\mathrm{KD}}$
+\item report optimizer convergence status independently from the value itself
+\end{enumerate}
+
+Two rules matter here:
+
+\begin{itemize}[leftmargin=1.5em]
+\item raw negativity in an optimized basis is not a curvature proof
+\item the reported value must track the best objective, not merely the last step
+\end{itemize}
+
+This section should therefore read as a bounded diagnostic report, not as a
+contextuality theorem.

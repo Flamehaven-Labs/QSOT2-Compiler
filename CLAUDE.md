@@ -1,6 +1,6 @@
 # QSOT2 project guidance
 
-Inherits the conventions in `D:\Sanctum\CLAUDE.md`. Project-specific discipline:
+Project-specific discipline for this repository:
 
 ## Scope discipline (the reason this repo exists)
 - QSOT2 verifies **mathematical-consistency** of a phenomenological model. It does **not**

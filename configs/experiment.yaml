@@ -1,0 +1,26 @@
+experiment_id: qsot2-math-consistency
+version: "0.1.0"
+description: "QSOT2 mathematical-consistency verification (phenomenological quantum-channel model)"
+
+backgrounds: [flat, schwarzschild, de_sitter, ads5, eguchi_hanson, godel_universe]
+sensitivity: 0.1       # alpha (calibration parameter — NOT a derived constant)
+boost_beta: 0.5
+steps: 3
+
+phases:
+  - id: phase0_temporal_axioms
+    enabled: true
+  - id: phase1_flat_baselines
+    enabled: true
+  - id: phase2_curvature_noise
+    enabled: true
+  - id: phase3_boosts
+    enabled: true
+  - id: phase4_kd_governance
+    enabled: true
+  - id: phase5_ttm_accessibility
+    enabled: true
+
+output:
+  formats: [json, md]   # pdf optional
+  dir: reports

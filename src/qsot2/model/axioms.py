@@ -55,13 +55,10 @@ class TemporalStateAxiomVerifier:
         rho_next: np.ndarray,
         channel_fn: Callable[[np.ndarray], np.ndarray],
     ) -> bool:
-        """Verify 1-step trajectory replay matches channel: rho_{i+1} ≈ E_i(rho_i).
+        """Verify 1-step trajectory replay matches channel: rho_{i+1} ~= E_i(rho_i).
 
         The conditionability check verifies trajectory and composed-channel consistency under the implemented model.
         It does not by itself prove a physical theorem about time.
-
-        conditionability check는 구현된 모델 안에서 trajectory와 합성 채널의 정합성을 확인한다.
-        이것만으로 시간에 대한 물리학 정리를 증명하는 것은 아니다.
         """
         return np.allclose(channel_fn(rho_i), rho_next, atol=self.atol, rtol=self.rtol)
 
@@ -72,13 +69,10 @@ class TemporalStateAxiomVerifier:
         channel_a: Callable[[np.ndarray], np.ndarray],
         channel_b: Callable[[np.ndarray], np.ndarray],
     ) -> bool:
-        """Verify 2-step composition: rho_{i+2} ≈ E_{i+1}(E_i(rho_i)).
+        """Verify 2-step composition: rho_{i+2} ~= E_{i+1}(E_i(rho_i)).
 
         The conditionability check verifies trajectory and composed-channel consistency under the implemented model.
         It does not by itself prove a physical theorem about time.
-
-        conditionability check는 구현된 모델 안에서 trajectory와 합성 채널의 정합성을 확인한다.
-        이것만으로 시간에 대한 물리학 정리를 증명하는 것은 아니다.
         """
         return np.allclose(
             channel_b(channel_a(rho_i)), rho_next_next, atol=self.atol, rtol=self.rtol
@@ -91,13 +85,10 @@ class TemporalStateAxiomVerifier:
         channel_b: Callable[[np.ndarray], np.ndarray],
         composed_channel: Callable[[np.ndarray], np.ndarray],
     ) -> bool:
-        """Verify composed evolution matches sequential composition: E_b(E_a(rho)) ≈ E_ba(rho).
+        """Verify composed evolution matches sequential composition: E_b(E_a(rho)) ~= E_ba(rho).
 
         The conditionability check verifies trajectory and composed-channel consistency under the implemented model.
         It does not by itself prove a physical theorem about time.
-
-        conditionability check는 구현된 모델 안에서 trajectory와 합성 채널의 정합성을 확인한다.
-        이것만으로 시간에 대한 물리학 정리를 증명하는 것은 아니다.
         """
         seq_evolved = channel_b(channel_a(rho0))
         comp_evolved = composed_channel(rho0)

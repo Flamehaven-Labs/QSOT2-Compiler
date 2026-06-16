@@ -333,7 +333,7 @@ def _build_eguchi_hanson(D: int = 10) -> BackgroundField:
 
 
 def _build_godel_universe(D: int = 10) -> BackgroundField:
-    """Gödel universe: rotating dust, non-zero Ricci/Riemann curvature, contains CTCs."""
+    """Godel universe: rotating dust, non-zero Ricci/Riemann curvature, contains CTCs."""
     G = np.diag([-1.0] + [1.0] * (D - 1))
     ricci = np.eye(D) * 0.3
     return BackgroundField(

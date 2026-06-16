@@ -1,4 +1,4 @@
-"""CLI entrypoint for running QSOT V2 experiments."""
+"""CLI entrypoint for running QSOT2 experiments."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from qsot2.reports.renderer import ReportRenderer
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="QSOT Compiler V2 — CLI-First Experiment Runner & Report Generator"
+        description="QSOT2 - CLI-First Experiment Runner and Report Generator"
     )
     parser.add_argument(
         "--config",
@@ -119,13 +119,13 @@ def main() -> int:
             print(f"[{idx}/{total_phases}] Phase {phase_num}: {phase_title} ... SKIPPED")
 
     print("-" * 70)
-    print(f"✓ Overall Verdict: {result.verdict}")
+    print(f"Overall Verdict: {result.verdict}")
     print(
         f"  Passed: {result.passed} / Failed: {result.failed} / Skipped: {result.skipped} / Degraded: {result.degraded}"
     )
     print("-" * 70)
     for fmt, path in paths.items():
-        print(f"→ Generated {fmt.upper()}: {path}")
+        print(f"-> Generated {fmt.upper()}: {path}")
     print("=" * 70)
 
     # Return 0 for PASS/DEGRADED_PASS, 1 for FAIL

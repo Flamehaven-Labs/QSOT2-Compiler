@@ -1,4 +1,4 @@
-"""ExperimentRunner — runs the QSOT2 math-verification phases (Phase 0 + Phases 1-5) based on config."""
+"""ExperimentRunner - runs the QSOT2 math-verification phases (Phase 0 + Phases 1-5) based on config."""
 
 from __future__ import annotations
 

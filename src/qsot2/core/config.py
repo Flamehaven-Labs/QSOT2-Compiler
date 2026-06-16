@@ -49,7 +49,7 @@ class ExperimentConfig:
     version: str
     description: str
     backgrounds: List[str]
-    sensitivity: float  # alpha — free calibration parameter, not derived
+    sensitivity: float  # alpha - free calibration parameter, not derived
     boost_beta: float
     steps: int
     phases: List[PhaseConfig]

@@ -1,4 +1,4 @@
-"""ReportRenderer — renders ExperimentResult into JSON, Markdown, and PDF."""
+"""ReportRenderer - renders ExperimentResult into JSON, Markdown, and PDF."""
 
 from __future__ import annotations
 

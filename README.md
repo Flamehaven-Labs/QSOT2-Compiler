@@ -1,6 +1,7 @@
 # QSOT2 — a mathematical-consistency verifier
 
 [![CI](https://github.com/Flamehaven-Labs/QSOT2-Compiler/actions/workflows/ci.yml/badge.svg)](https://github.com/Flamehaven-Labs/QSOT2-Compiler/actions/workflows/ci.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20742042.svg)](https://doi.org/10.5281/zenodo.20742042)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Claim scope: mathematical-consistency only](https://img.shields.io/badge/claim%20scope-mathematical--consistency%20only-orange.svg)](docs/SCOPE.md)
@@ -148,7 +149,7 @@ Refactoring here is *meaning separation*, not a repudiation of prior work — QS
 
 ## Status
 
-`0.1.0` — first tagged release. Migration complete (model + Phases 0-5 ported from QSOT-Harness `src/qsot_v2/`), tests migrated (50 passing, 96% coverage), reference run green at `DEGRADED_PASS`. The Zenodo DOI is minted on publish of the `v0.1.0` GitHub release and added to `CITATION.cff` + this README in a follow-up.
+`0.1.0` — first tagged release. DOI [10.5281/zenodo.20742042](https://doi.org/10.5281/zenodo.20742042). Migration complete (model + Phases 0-5 ported from QSOT-Harness `src/qsot_v2/`), tests migrated (50 passing, 96% coverage), reference run green at `DEGRADED_PASS`.
 
 ## Documentation
 
@@ -159,7 +160,7 @@ Refactoring here is *meaning separation*, not a repudiation of prior work — QS
 
 ## Citation
 
-Preferred metadata lives in [`CITATION.cff`](CITATION.cff). **Citing QSOT2 is not a substitute for citing QSOT-Harness** (DOI [10.5281/zenodo.20665824](https://doi.org/10.5281/zenodo.20665824)) where the published combined snapshot lives.
+Preferred metadata lives in [`CITATION.cff`](CITATION.cff). QSOT2 DOI: [10.5281/zenodo.20742042](https://doi.org/10.5281/zenodo.20742042). **Citing QSOT2 is not a substitute for citing QSOT-Harness** (DOI [10.5281/zenodo.20665824](https://doi.org/10.5281/zenodo.20665824)) where the published combined snapshot lives.
 
 ## License
 

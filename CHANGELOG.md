@@ -54,7 +54,6 @@ or quantum-gravity claim, and not peer-reviewed.
 - Re-scoped from QSOT-Harness `src/qsot_v2/` with clean, separate git history;
   the epistemic-governance layer is deferred to a separate library
   (`flamehaven-sci-governance`).
-- The Zenodo DOI for this release is minted on publish and added to
-  `CITATION.cff` + `README.md` in a follow-up.
+- Zenodo DOI: [10.5281/zenodo.20742042](https://doi.org/10.5281/zenodo.20742042).
 
 [0.1.0]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/releases/tag/v0.1.0

@@ -25,4 +25,4 @@ QSOT2 keeps only a **minimal claim-boundary statement** in its output. The full 
 
 ## Relationship to the published QSOT-Harness
 
-QSOT-Harness (DOI 10.5281/zenodo.20703548) remains the immutable published **combined** snapshot. QSOT2 does not modify it. QSOT2 is a forward, re-scoped line — refactoring as *meaning separation*, not a repudiation of prior work, which produced real, reviewer-approved results.
+QSOT-Harness (DOI 10.5281/zenodo.20665824) remains the immutable published **combined** snapshot. QSOT2 does not modify it. QSOT2 is a forward, re-scoped line — refactoring as *meaning separation*, not a repudiation of prior work, which produced real, reviewer-approved results.

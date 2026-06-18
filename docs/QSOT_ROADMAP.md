@@ -222,7 +222,7 @@ Prove that QSOT2 is a clean re-scoping, not a silent behavioral rewrite.
 QSOT-Harness published hardened line:
 
 - source commit: `c0f6c6a`
-- public release line: `v2.1.2` / DOI `10.5281/zenodo.20703548`
+- public release line: `v2.1.2` / DOI `10.5281/zenodo.20665824`
 - reference artifact family rooted in canonical `result.json`
 
 ### Required parity checks

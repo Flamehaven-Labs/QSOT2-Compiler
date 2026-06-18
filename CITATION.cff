@@ -1,18 +1,77 @@
+# Citation file for QSOT2-Compiler.
+#
+# Recognized by Zenodo (auto-generates DOI metadata on release), GitHub
+# ("Cite this repository" sidebar), and citation managers.
+#
+# Format: Citation File Format v1.2.0
+# Specification: https://citation-file-format.github.io/
+
 cff-version: 1.2.0
-message: "If you use QSOT2, please cite this software."
-title: "QSOT2: a mathematical-consistency verifier for a phenomenological curved-spacetime quantum-channel model"
+message: >-
+  QSOT2 is the re-scoped mathematical-verification line of the QSOT program.
+  When citing it in academic work, please also cite the published combined
+  snapshot it descends from, QSOT-Harness (DOI 10.5281/zenodo.20665824).
+
+type: software
+
+title: >-
+  QSOT2: a mathematical-consistency verifier for a phenomenological
+  curved-spacetime quantum-channel model
+
 abstract: >-
-  A bounded verifier of the internal mathematical consistency of a phenomenological
-  model that maps curved-spacetime curvature norms to single-qubit quantum channels.
-  Model-consistency only; it makes no external-physical-validity or first-principles
-  claim.
+  A bounded, deterministic verifier of the internal mathematical consistency
+  of a phenomenological model that maps curved-spacetime curvature norms to
+  single-qubit quantum channels. It checks five temporal-state axioms to
+  machine epsilon (linearity, CPTP completeness, trace preservation,
+  conditionability, density validity), CPTP channel construction across six
+  spacetime backgrounds (flat, Schwarzschild, de Sitter, AdS5, Eguchi-Hanson,
+  Goedel), a basis-optimized flat-relative Kirkwood-Dirac comparison, and a
+  self-tested TTM-inspired non-Markovianity proxy, emitting a lean
+  machine-readable result under a fixed four-field claim boundary. It is
+  model-consistency only: it makes NO external-physical-validity,
+  first-principles, or quantum-gravity claim, and has NOT been peer-reviewed.
+
 authors:
-  - name: "Flamehaven Labs"
-version: "0.1.0.dev0"
+  - family-names: Yun
+    given-names: Kwansub
+    affiliation: Flamehaven Initiative
+  - name: Flamehaven Initiative
+    website: 'https://github.com/Flamehaven-Labs'
+
+version: 0.1.0
+date-released: '2026-06-18'
+
+url: 'https://github.com/Flamehaven-Labs/QSOT2-Compiler'
+repository-code: 'https://github.com/Flamehaven-Labs/QSOT2-Compiler'
+
 license: MIT
-repository-code: "https://github.com/Flamehaven-Labs/QSOT2-Compiler"
+
 keywords:
   - quantum-channels
-  - verification
-  - reproducibility
+  - open-quantum-systems
+  - cptp
+  - kirkwood-dirac
+  - non-markovianity
   - phenomenological-model
+  - mathematical-verification
+  - reproducibility
+  - executable-verification
+
+references:
+  - type: software
+    title: >-
+      QSOT-Harness: a bounded, epistemically-labeled verification harness
+      (honest reconstruction of the QSOT Compiler v1 slop artifact)
+    authors:
+      - family-names: Yun
+        given-names: Kwansub
+        affiliation: Flamehaven Initiative
+      - name: Flamehaven Initiative
+        website: 'https://github.com/Flamehaven-Labs'
+    year: 2026
+    doi: 10.5281/zenodo.20665824
+    url: 'https://github.com/Flamehaven-Labs/QSOT-Harness'
+    notes: >-
+      Predecessor and published combined snapshot. QSOT2 is the re-scoped
+      mathematical-verification line lifted out of QSOT-Harness; the heavier
+      epistemic-governance layer is deferred to a separate library.

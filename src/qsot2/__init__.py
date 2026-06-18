@@ -6,4 +6,4 @@ consistency of the model; it does not claim new physics or first-principles grou
 See docs/SCOPE.md.
 """
 
-__version__ = "0.1.0.dev0"
+__version__ = "0.1.0"

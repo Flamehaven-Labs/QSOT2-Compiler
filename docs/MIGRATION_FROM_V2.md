@@ -1,7 +1,7 @@
 # Migration from QSOT-Harness (`qsot_v2`) to QSOT2
 
 Source: the QSOT-Harness repository (`src/qsot_v2/`) at the published r1 line
-(source commit `c0f6c6a`, artifact canonical-LF `1498610f`, DOI 10.5281/zenodo.20703548).
+(source commit `c0f6c6a`, artifact canonical-LF `1498610f`, DOI 10.5281/zenodo.20665824).
 
 QSOT2 ports the **model + harness** layers and **defers** the governance layer. This is a
 re-scoping, not a rewrite: the migrated code is the reviewer-approved r1 code, cleaned of

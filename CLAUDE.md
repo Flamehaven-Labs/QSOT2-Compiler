@@ -17,5 +17,5 @@ Project-specific discipline for this repository:
 - Python source ASCII-only in strings and comments.
 - Numeric outputs are reference truth; keep them reproducible. Do not embed environment-
   dependent values (e.g. elapsed time) as expected output.
-- Do not modify the published QSOT-Harness artifact (DOI 10.5281/zenodo.20703548); QSOT2 is a
+- Do not modify the published QSOT-Harness artifact (DOI 10.5281/zenodo.20665824); QSOT2 is a
   separate forward line.

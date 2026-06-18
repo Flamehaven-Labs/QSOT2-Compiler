@@ -3,14 +3,18 @@ This section centralizes the non-claims; the rest of the paper does not repeat t
 \begin{itemize}[leftmargin=1.5em]
 \item No first-principles derivation of the curvature-to-channel map; it is a
   phenomenological ansatz.
+\item No claim that the curvature inputs are physically derived: the Riemann/Ricci norms
+  are non-derived toy proxies (hand-set constants or Ricci copies, flagged per background
+  by \texttt{riemann\_is\_toy}), so $\alpha\lVert\mathrm{Riemann}\rVert_F$ is dimensionless
+  and carries no physical units.
 \item No external physical validation of the model.
 \item No claim that the free calibration parameter $\alpha$ is physically derived; it is
   a demonstrative mid-range setting, and quantitative magnitudes are
   calibration-dependent.
 \item No claim that the TTM-inspired proxy is a full transfer-tensor reconstruction.
 \item No governance-heavy audit interpretation in this paper; gate and verdict labels are
-  policy-derived classifications, and the epistemic-governance machinery is out of scope
-  for QSOT2.
+  implementation-defined classifications (serialized as \texttt{policy\_reason\_code}), and
+  the epistemic-governance machinery is out of scope for QSOT2.
 \end{itemize}
 
 A passing check therefore means model-internal mathematical consistency under the stated

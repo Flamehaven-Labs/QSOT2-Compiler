@@ -1,0 +1,35 @@
+{
+  "schema_id": "qsot2.math_consistency.alpha_sweep.v1",
+  "description": "Flat-relative KD delta across an alpha sweep. The flat baseline is alpha-independent (zero curvature -> identity channel); de Sitter decoheres with alpha, so kd_delta saturates toward |kd_flat|.",
+  "kd_optimization_steps": 50,
+  "backgrounds": [
+    "flat",
+    "de_sitter"
+  ],
+  "sweep": [
+    {
+      "alpha": 0.01,
+      "kd_flat": -0.1234429932877238,
+      "kd_desitter": -0.10990129868032664,
+      "kd_delta": 0.013541694607397167,
+      "flat_converged": false,
+      "desitter_converged": false
+    },
+    {
+      "alpha": 0.1,
+      "kd_flat": -0.1234429932877238,
+      "kd_desitter": -0.00047340700984841463,
+      "kd_delta": 0.1229695862778754,
+      "flat_converged": false,
+      "desitter_converged": true
+    },
+    {
+      "alpha": 1.0,
+      "kd_flat": -0.1234429932877238,
+      "kd_desitter": 5.114871479460421e-05,
+      "kd_delta": 0.1234941420025184,
+      "flat_converged": false,
+      "desitter_converged": true
+    }
+  ]
+}

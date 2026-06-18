@@ -1,4 +1,9 @@
-"""Single Source of Truth for physics background classification and gate verification policies."""
+"""Single source of truth for background classification and gate verification.
+
+Gate and admissibility labels are implementation-defined classifications, not
+physical observables. Each decision is serialized as a ``policy_reason_code``
+field in the result artifact (the field name is retained for schema stability).
+"""
 
 from __future__ import annotations
 

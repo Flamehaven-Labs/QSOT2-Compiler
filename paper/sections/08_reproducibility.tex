@@ -15,6 +15,14 @@ $\sim$96\%.
 \texttt{schema\_id = qsot2.math\_consistency.experiment\_result.v1} and a four-field
 claim boundary; it contains no evidence-class, audit-context, or calibration blocks.
 
+\paragraph{Alpha sweep.} The sensitivity sweep of \S\ref{sec:results} is reproduced by
+\begin{verbatim}
+python scripts/alpha_sweep.py
+\end{verbatim}
+which writes \texttt{reports/sweep\_alpha.json}
+(\texttt{schema\_id = qsot2.math\_consistency.alpha\_sweep.v1}) without overwriting the
+frozen reference \texttt{reports/result.json}.
+
 \paragraph{Parity targets.} Against the QSOT-Harness r1 math engine the retained
 quantities reproduce: $Q^{\text{flat}}_{\mathrm{KD}} \approx -0.1234$,
 $Q^{\text{de Sitter}}_{\mathrm{KD}} \approx -4.7\times10^{-4}$,

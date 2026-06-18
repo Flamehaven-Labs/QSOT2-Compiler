@@ -10,8 +10,14 @@ Phase~4 reports a single bounded diagnostic and keeps its interpretation narrow.
 \item The reported signal is the flat-relative difference
   $\Delta_{\mathrm{KD}} = Q^{\text{de Sitter}}_{\mathrm{KD}} - Q^{\text{flat}}_{\mathrm{KD}}
   \approx +0.1230$.
-\item Convergence is reported independently of the value: the flat-baseline search does
-  not converge within its fixed 50-step budget, so the KD check is surfaced as
+\item Convergence is reported independently of the value. Convergence here means the
+  early-stop criterion fired: the objective failed to improve by more than $10^{-6}$ for
+  $20$ consecutive steps. On the flat baseline the objective is still improving at the
+  final step (its best value coincides with the last step), so within the fixed $50$-step
+  budget the criterion never fires and convergence is recorded \texttt{false}; the
+  de~Sitter search, by contrast, early-stops at step~$42$. Non-convergence here therefore
+  means \emph{not yet plateaued}, not \emph{diverged}: the reported value is the best
+  observed objective and is well defined regardless. The KD check is surfaced as
   \texttt{DEGRADED\_PASS} rather than hidden.
 \end{enumerate}
 
@@ -20,4 +26,7 @@ property of single-qubit states; it is \emph{not} a curvature or contextuality p
 Only the flat-relative delta is reported, and even that is a model-relative quantity.
 Second, the reported value tracks the \emph{best} observed objective (best and last
 values are recorded separately), not merely the final optimizer step. This section
-therefore reads as a bounded diagnostic report, not a contextuality theorem.
+therefore reads as a bounded diagnostic report, not a contextuality theorem. Phase~4 is a
+\emph{diagnostic-tier} check: its convergence flag is the sole input to the single degraded
+label and is reported separately from the Phase~0 consistency axioms, which it does not
+affect (see the tiered reading in \S\ref{sec:results}).

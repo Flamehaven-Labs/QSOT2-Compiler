@@ -21,5 +21,9 @@ In the reference run the realized deviations sit at machine epsilon: linearity
 $\sim 1.1\times10^{-16}$, CPTP completeness $\sim 1.6\times10^{-16}$, and trace
 preservation $\sim 4.4\times10^{-16}$; the composed-channel, sequential-replay, and
 two-step conditionability deviations are exactly $0$. These are reported as
-machine-precision evidence, not as prose assurances. Phase~0 is where QSOT2 earns its
-identity as a verifier rather than a narrative artifact.
+machine-precision evidence, not as prose assurances. Because the channels are CPTP by
+construction, these axiom checks function as executable regression and consistency tests:
+they guard the implementation against drift and confirm the maps behave as specified, but
+they are \emph{not} independent evidence that the underlying ansatz is physically correct.
+That distinction is the point --- Phase~0 makes QSOT2 a verifier with falsifiable numerical
+predicates rather than a narrative artifact.

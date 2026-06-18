@@ -45,7 +45,11 @@ temporal-state axioms (linearity, CPTP completeness, trace preservation,
 conditionability, density validity) are checked to machine epsilon, channels are CPTP by
 construction, a flat-relative Kirkwood-Dirac comparison is reported as a bounded
 diagnostic, and a TTM-inspired trace-distance proxy is split into a detector self-test
-and the model trajectory. The reference run over six spacetime backgrounds emits a
+and the model trajectory. These are executable regression and internal-consistency
+tests for the implemented ansatz, not empirical evidence that the curvature-to-channel
+mapping is physically correct; the curvature norms themselves are non-derived toy
+proxies, so the product $\alpha\lVert\mathrm{Riemann}\rVert_F$ is a pure number carrying
+no physical units. The reference run over six spacetime backgrounds emits a
 machine-readable result with a four-field claim boundary and an overall
 \texttt{DEGRADED\_PASS} verdict across 35 deterministic checks --- degraded for exactly
 one documented reason: the flat-baseline KD optimizer does not converge within its fixed

@@ -149,8 +149,9 @@ Refactoring here is *meaning separation*, not a repudiation of prior work — QS
 
 ## Status
 
-`0.1.1` — current published line after final paper/code alignment. Latest Zenodo-backed release:
-DOI [10.5281/zenodo.20763331](https://doi.org/10.5281/zenodo.20763331). Migration complete
+`0.1.2` — current repository line after post-release paper/layout cleanup. The latest
+DOI-bearing Zenodo release remains `0.1.1`, DOI
+[10.5281/zenodo.20763331](https://doi.org/10.5281/zenodo.20763331). Migration complete
 (model + Phases 0-5 ported from QSOT-Harness `src/qsot_v2/`), tests migrated (50 passing, 96%
 coverage), reference run green at `DEGRADED_PASS`.
 
@@ -163,8 +164,9 @@ coverage), reference run green at `DEGRADED_PASS`.
 
 ## Citation
 
-Preferred metadata lives in [`CITATION.cff`](CITATION.cff). The latest DOI-bearing QSOT2
-release is `0.1.1`, DOI [10.5281/zenodo.20763331](https://doi.org/10.5281/zenodo.20763331).
+Preferred metadata lives in [`CITATION.cff`](CITATION.cff). The current repository line is
+`0.1.2`; the latest DOI-bearing QSOT2 release remains `0.1.1`, DOI
+[10.5281/zenodo.20763331](https://doi.org/10.5281/zenodo.20763331).
 **Citing QSOT2 is not a substitute for citing QSOT-Harness** (DOI
 [10.5281/zenodo.20665824](https://doi.org/10.5281/zenodo.20665824)) where the published
 combined snapshot lives.

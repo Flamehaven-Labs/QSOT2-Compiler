@@ -1,5 +1,5 @@
 experiment_id: qsot2-math-consistency
-version: "0.1.1"
+version: "0.1.2"
 description: "QSOT2 mathematical-consistency verification (phenomenological quantum-channel model)"
 
 backgrounds: [flat, schwarzschild, de_sitter, ads5, eguchi_hanson, godel_universe]

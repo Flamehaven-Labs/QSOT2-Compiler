@@ -1,9 +1,31 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.1.2] - 2026-06-19
+
+### Changed
+
+- Promoted the repository line to `0.1.2` to separate the current working surface from the
+  DOI-bearing `0.1.1` publication snapshot.
+- Rewrote the paper's reproducibility surface around an artifact traceability table with
+  DOI anchor, schema IDs, and canonical-LF SHA-256 hashes.
+- Strengthened the paper bibliography/front matter: abstract restored, references added,
+  and section-level citations inserted for open quantum systems, Kirkwood--Dirac, the
+  TTM source method, and the QSOT-Harness predecessor.
+- Tightened the paper PDF layout for the traceability table and added an explicit
+  disclaimer for legacy governance-like field names retained in serialized artifacts for
+  backward compatibility only.
+- Updated the tracked `paper/main.pdf` to match the latest paper source.
+
+### Notes
+
+- `0.1.2` is the current repository line.
+- The latest DOI-bearing QSOT2 release remains `0.1.1`,
+  DOI [10.5281/zenodo.20763331](https://doi.org/10.5281/zenodo.20763331).
 
 ## [0.1.1] - 2026-06-19
 
@@ -14,6 +36,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The alpha-sweep interpretation now foregrounds the non-robustness warning before the
   numeric sequence.
 - Acknowledgements wording trimmed to remove defensive institutional language.
+
+### Notes
+
+- Published as the Zenodo-backed QSOT2 release:
+  DOI [10.5281/zenodo.20763331](https://doi.org/10.5281/zenodo.20763331).
 
 ## [0.1.0] - 2026-06-18
 
@@ -67,4 +94,5 @@ or quantum-gravity claim, and not peer-reviewed.
 - Zenodo DOI: [10.5281/zenodo.20742042](https://doi.org/10.5281/zenodo.20742042).
 
 [0.1.0]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/releases/tag/v0.1.0
-[0.1.1]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/compare/v0.1.0...main
+[0.1.1]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/releases/tag/v0.1.1
+[0.1.2]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/compare/v0.1.1...main

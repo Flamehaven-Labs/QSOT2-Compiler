@@ -20,10 +20,11 @@ implementation-defined classification metadata and are not interpreted as govern
 audit evidence.
 
 \paragraph{Artifact traceability.} Table~\ref{tab:artifact_traceability} ties each
-manuscript-facing claim surface to a concrete repository artifact. The stable public
-release anchor for this paper line is QSOT2~v0.1.1, DOI
-\href{https://doi.org/10.5281/zenodo.20763331}{10.5281/zenodo.20763331}; the hashes below
-are canonical-LF SHA-256 values of the repository files named in the first column.
+manuscript-facing claim surface to a concrete repository artifact. The stable DOI-bearing
+public release anchor for this paper line remains QSOT2~v0.1.1, DOI
+\href{https://doi.org/10.5281/zenodo.20763331}{10.5281/zenodo.20763331}; the current
+repository line is v0.1.2. The hashes below are canonical-LF SHA-256 values of the
+repository files named in the first column.
 
 \begin{table}[t]
 \centering
@@ -46,18 +47,18 @@ SHA-256 \artifacthash{8e547946e4b6d874ec58e23584977b07151571742be37d5e51da075d66
 
 \path{configs/experiment.yaml} &
 Fixed reference-run configuration used by \path{run_experiment.py} &
-\path{version: 0.1.1} &
-SHA-256 \artifacthash{c3a28b59044b6fdba474ccfd08da0f38e376285dc84a2f69637cf1c99c2e7f51} \\
+\path{version: 0.1.2} &
+SHA-256 \artifacthash{0b5cd5f148d8d72b867fa343f0c364a77aaefe2465431ef5f590e0f15c91813e} \\
 
 \path{pyproject.toml} &
 Environment and dependency contract for the published package line &
-\path{project.version = 0.1.1} &
-SHA-256 \artifacthash{d73f4616a33618093f3ffd51225c8214dc887296a93fac831e9a4959cb119dab} \\
+\path{project.version = 0.1.2} &
+SHA-256 \artifacthash{1d0bcd391d10c5194fee00d05c1f15d03797e044653bd6355a69f16ebb7f05bc} \\
 
 \path{tests/} &
 Executable verification suite covering the retained math line &
 50 tests; coverage gate $\geq 90\%$ &
-Repository test surface for the v0.1.1 line; current suite measures $\sim$96\% \\
+Repository test surface for the v0.1.2 line; current suite measures $\sim$96\% \\
 \bottomrule
 \end{tabularx}
 \caption{Artifact traceability for the QSOT2 paper line.}

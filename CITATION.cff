@@ -38,9 +38,7 @@ authors:
   - name: Flamehaven Initiative
     website: 'https://github.com/Flamehaven-Labs'
 
-version: 0.1.1
-doi: 10.5281/zenodo.20763331
-date-released: '2026-06-19'
+version: 0.1.2
 
 url: 'https://github.com/Flamehaven-Labs/QSOT2-Compiler'
 repository-code: 'https://github.com/Flamehaven-Labs/QSOT2-Compiler'

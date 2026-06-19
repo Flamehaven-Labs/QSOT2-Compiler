@@ -14,6 +14,10 @@ $\sim$96\%.
 \texttt{reports/report.md}. The result carries
 \texttt{schema\_id = qsot2.math\_consistency.experiment\_result.v1} and a four-field
 claim boundary; it contains no evidence-class, audit-context, or calibration blocks.
+Some legacy field names remain in the serialized verification artifact for backward
+compatibility with the QSOT-Harness result surface; in QSOT2 they function only as
+implementation-defined classification metadata and are not interpreted as governance or
+audit evidence.
 
 \paragraph{Artifact traceability.} Table~\ref{tab:artifact_traceability} ties each
 manuscript-facing claim surface to a concrete repository artifact. The stable public
@@ -21,33 +25,34 @@ release anchor for this paper line is QSOT2~v0.1.1, DOI
 \href{https://doi.org/10.5281/zenodo.20763331}{10.5281/zenodo.20763331}; the hashes below
 are canonical-LF SHA-256 values of the repository files named in the first column.
 
-\begin{table}[h]
+\begin{table}[t]
 \centering
 \scriptsize
-\begin{tabularx}{\textwidth}{@{}lXlX@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabularx}{\textwidth}{@{}p{0.19\textwidth} p{0.27\textwidth} p{0.19\textwidth} X@{}}
 \toprule
 Artifact & Role in paper & Schema / version & Traceability anchor \\
 \midrule
 \path{reports/result.json} &
 Reference-run verdict, 35 checks, claim boundary, and retained numerical outputs &
 \path{qsot2.math_consistency.experiment_result.v1} &
-SHA-256 \path{efca2228f177634f8f0f83b93eb5a7bc9246afe55cf707e780d2791b8a685bfc}; release DOI
+SHA-256 \artifacthash{efca2228f177634f8f0f83b93eb5a7bc9246afe55cf707e780d2791b8a685bfc}; release DOI
 \path{10.5281/zenodo.20763331} \\
 
 \path{reports/sweep_alpha.json} &
 Three-point $\alpha$ sensitivity sweep behind \S\ref{sec:results} &
 \path{qsot2.math_consistency.alpha_sweep.v1} &
-SHA-256 \path{8e547946e4b6d874ec58e23584977b07151571742be37d5e51da075d66bce7b6} \\
+SHA-256 \artifacthash{8e547946e4b6d874ec58e23584977b07151571742be37d5e51da075d66bce7b6} \\
 
 \path{configs/experiment.yaml} &
 Fixed reference-run configuration used by \path{run_experiment.py} &
 \path{version: 0.1.1} &
-SHA-256 \path{c3a28b59044b6fdba474ccfd08da0f38e376285dc84a2f69637cf1c99c2e7f51} \\
+SHA-256 \artifacthash{c3a28b59044b6fdba474ccfd08da0f38e376285dc84a2f69637cf1c99c2e7f51} \\
 
 \path{pyproject.toml} &
 Environment and dependency contract for the published package line &
 \path{project.version = 0.1.1} &
-SHA-256 \path{d73f4616a33618093f3ffd51225c8214dc887296a93fac831e9a4959cb119dab} \\
+SHA-256 \artifacthash{d73f4616a33618093f3ffd51225c8214dc887296a93fac831e9a4959cb119dab} \\
 
 \path{tests/} &
 Executable verification suite covering the retained math line &

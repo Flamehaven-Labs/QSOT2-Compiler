@@ -11,6 +11,7 @@
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{seqsplit}
 \usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex}
 
 \addbibresource{references.bib}
@@ -23,6 +24,8 @@
   pdftitle={A Mathematical-Consistency Verifier for a Phenomenological Curved-Spacetime Quantum-Channel Model},
   pdfauthor={Kwansub Yun}
 }
+
+\newcommand{\artifacthash}[1]{\texttt{\seqsplit{#1}}}
 
 \title{%
   A Mathematical-Consistency Verifier\\

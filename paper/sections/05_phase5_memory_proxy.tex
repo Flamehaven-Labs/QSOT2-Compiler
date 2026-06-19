@@ -1,6 +1,9 @@
 Phase~5 runs a TTM-inspired trace-distance proxy: at each step it accumulates the trace
 distance between the actual trajectory and the one-step Markovian channel prediction. It
-is a bounded backflow diagnostic, not a transfer-tensor reconstruction.
+is a bounded backflow diagnostic, not a transfer-tensor reconstruction. The naming is
+deliberately comparative: the full Transfer Tensor Method reconstructs non-Markovian
+memory through transfer tensors inferred from process data~\cite{CerrilloCao2014},
+whereas QSOT2 uses only a trace-distance proxy in that spirit.
 
 Two trajectories are kept distinct:
 

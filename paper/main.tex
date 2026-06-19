@@ -11,6 +11,9 @@
 \usepackage{xcolor}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage[backend=biber,style=alphabetic,sorting=nyt]{biblatex}
+
+\addbibresource{references.bib}
 
 \hypersetup{
   colorlinks=true,
@@ -28,8 +31,8 @@
   \large Executable Internal-Consistency Checks for the QSOT2 Line
 }
 
-\author{Kwansub Yun \\ \small Flamehaven Initiative}
-\date{2026-06-19 \\ \small Source: \url{https://github.com/Flamehaven-Labs/QSOT2-Compiler}}
+\author{Kwansub Yun\thanks{Independent researcher, Flamehaven Labs.}}
+\date{}
 
 \begin{document}
 \maketitle
@@ -61,6 +64,7 @@ QSOT-Harness r1 math engine; the exact commands and parity targets are given in
 \S\ref{sec:repro}.
 \end{abstract}
 
+\clearpage
 \tableofcontents
 \clearpage
 
@@ -96,7 +100,7 @@ QSOT-Harness r1 math engine; the exact commands and parity targets are given in
 \label{sec:repro}
 \input{sections/08_reproducibility.tex}
 
-\section*{Acknowledgements}
-\input{sections/09_acknowledgements.tex}
+\clearpage
+\printbibliography
 
 \end{document}

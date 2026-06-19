@@ -1,6 +1,8 @@
 Phase~0 verifies five temporal-state axioms of the implemented single-qubit channel maps.
 Each is a falsifiable numerical predicate evaluated to machine precision; a check passes
 when its deviation is below a fixed tolerance ($\texttt{atol}=\texttt{rtol}=10^{-9}$).
+The axioms are standard consistency conditions for quantum channels and open-system
+state evolution~\cite{Breuer2002}.
 
 \begin{description}[leftmargin=1.5em]
 \item[Linearity.] For a channel $\mathcal{E}$, states $\rho_a,\rho_b$, and scalars $p,q$,

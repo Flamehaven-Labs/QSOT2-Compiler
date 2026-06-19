@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.1.1] - 2026-06-19
+
+### Changed
+
+- Final paper wording aligned with the frozen code/artifact surface.
+- QSOT2 paper table labels clarified background ordering and unified `AdS5` notation.
+- The alpha-sweep interpretation now foregrounds the non-robustness warning before the
+  numeric sequence.
+- Acknowledgements wording trimmed to remove defensive institutional language.
+
 ## [0.1.0] - 2026-06-18
 
 First tagged release of QSOT2 — the re-scoped **mathematical-consistency
@@ -57,3 +67,4 @@ or quantum-gravity claim, and not peer-reviewed.
 - Zenodo DOI: [10.5281/zenodo.20742042](https://doi.org/10.5281/zenodo.20742042).
 
 [0.1.0]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/releases/tag/v0.1.0
+[0.1.1]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/compare/v0.1.0...main

@@ -23,9 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Notes
 
-- `0.1.2` is the current repository line.
-- The latest DOI-bearing QSOT2 release remains `0.1.1`,
-  DOI [10.5281/zenodo.20763331](https://doi.org/10.5281/zenodo.20763331).
+- `0.1.2` is the current DOI-bearing QSOT2 release,
+  DOI [10.5281/zenodo.20764446](https://doi.org/10.5281/zenodo.20764446).
 
 ## [0.1.1] - 2026-06-19
 
@@ -95,4 +94,4 @@ or quantum-gravity claim, and not peer-reviewed.
 
 [0.1.0]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/releases/tag/v0.1.0
 [0.1.1]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/releases/tag/v0.1.1
-[0.1.2]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/compare/v0.1.1...main
+[0.1.2]: https://github.com/Flamehaven-Labs/QSOT2-Compiler/releases/tag/v0.1.2
